@@ -55,3 +55,6 @@ isListEmpty = null emptyList
 -- This doesn't work for some reason... not quite sure how to concatenate a bool and a string
 -- outputEmptyList = "Is the list empty: " ++ isListEmpty
 
+boomBang xs = [ if x < 10 then "BOOM!" else "BANG!" | x <- xs, odd x ]
+
+removeNonUppercase string = [ character | character <- string, character `elem` ['A'..'Z']]
