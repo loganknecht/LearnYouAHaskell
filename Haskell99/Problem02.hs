@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------- 
- -- 2 Problem 2
+-- 2 Problem 2
 -------------------------------------------------------------------------------- 
 -- (*) Find the last but one element of a list.
 -- (Note that the Lisp transcription of this problem is incorrect.)
@@ -18,7 +18,13 @@ penultimate :: [a] -> a
 penultimate [] = error "An empty list was provided."
 penultimate [x] = error "A list with one element was provided."
 --penultimate (x:_) = x
-penultimate (x:_) = x
+--penultimate (x:_) = x
+--penultimate (x:_) = x:xs
+
+testiterate :: [a] -> a
+testiterate [] = error "An empty list was provided"
+testiterate [x] = error "A list with one element was provided"
+testiterate (x:xs) = if(length xs == 2) then "at penultimate" else "iterating"
 
 
 --penultimate list = 
