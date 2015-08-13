@@ -5,41 +5,41 @@ module HW01 where
 
 -- Get the last digit from a number
 lastDigit :: Integer -> Integer
-lastDigit = undefined
+lastDigit number = read ((last (show number)):[])
 
--- Drop the last digit from a number
-dropLastDigit :: Integer -> Integer
-dropLastDigit = undefined
+---- Drop the last digit from a number
+--dropLastDigit :: Integer -> Integer
+--dropLastDigit = undefined
 
--- Exercise 2 -----------------------------------------
+---- Exercise 2 -----------------------------------------
 
-toRevDigits :: Integer -> [Integer]
-toRevDigits = undefined
+--toRevDigits :: Integer -> [Integer]
+--toRevDigits = undefined
 
--- Exercise 3 -----------------------------------------
+---- Exercise 3 -----------------------------------------
 
--- Double every second number in a list starting on the left.
-doubleEveryOther :: [Integer] -> [Integer]
-doubleEveryOther = undefined
+---- Double every second number in a list starting on the left.
+--doubleEveryOther :: [Integer] -> [Integer]
+--doubleEveryOther = undefined
 
--- Exercise 4 -----------------------------------------
+---- Exercise 4 -----------------------------------------
 
--- Calculate the sum of all the digits in every Integer.
-sumDigits :: [Integer] -> Integer
-sumDigits = undefined
+---- Calculate the sum of all the digits in every Integer.
+--sumDigits :: [Integer] -> Integer
+--sumDigits = undefined
 
 
--- Exercise 5 -----------------------------------------
+---- Exercise 5 -----------------------------------------
 
--- Validate a credit card number using the above functions.
-luhn :: Integer -> Bool
-luhn = undefined
+---- Validate a credit card number using the above functions.
+--luhn :: Integer -> Bool
+--luhn = undefined
 
--- Exercise 6 -----------------------------------------
+---- Exercise 6 -----------------------------------------
 
--- Towers of Hanoi for three pegs
-type Peg = String
-type Move = (Peg, Peg)
+---- Towers of Hanoi for three pegs
+--type Peg = String
+--type Move = (Peg, Peg)
 
-hanoi :: Integer -> Peg -> Peg -> Peg -> [Move]
-hanoi = undefined
+--hanoi :: Integer -> Peg -> Peg -> Peg -> [Move]
+--hanoi = undefined
