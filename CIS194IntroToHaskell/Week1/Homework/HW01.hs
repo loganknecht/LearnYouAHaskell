@@ -45,14 +45,23 @@ sumDigit number = if number < 10 then number else (sumDigit (number `div` 10)) +
 -- Exercise 5 -----------------------------------------
 
 -- Validate a credit card number using the above functions.
---luhn :: Integer -> Bool
---luhn = undefined
+luhn :: Integer -> Bool
+luhn number = if sumDigits(reverse(doubleEveryOther (toRevDigits number))) `mod` 10 == 0 then True else False
 
 -- Exercise 6 -----------------------------------------
 
--- Towers of Hanoi for three pegs
---type Peg = String
---type Move = (Peg, Peg)
+-- To move n discs (stacked in increasing size) from start peg to end peg using 
+-- a spare peg as temporary storage
 
---hanoi :: Integer -> Peg -> Peg -> Peg -> [Move]
---hanoi = undefined
+-- 1. move n − 1 discs from start peg to spare peg using end as temporary storage
+-- 2. move the top disc from start peg to end peg 
+-- 3. move n − 1 discs from spare peg to end peg using start peg as temporary storage.
+
+-- Towers of Hanoi for three pegs
+type Peg = String
+type Move = (Peg, Peg)
+
+hanoi :: Integer -> Peg -> Peg -> Peg -> [Move]
+hanoi numberOfDiscs startPeg endPeg sparePeg
+    | numberOfDiscs == 0 = []
+    | otherwise = (hanoi (numberOfDiscs - 1) startPeg sparePeg endPeg) ++ (startPeg, endPeg):[] ++ (hanoi (numberOfDiscs - 1) sparePeg endPeg startPeg) 
