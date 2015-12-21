@@ -21,13 +21,13 @@ penultimate [x] = error "A list with one element was provided."
 --penultimate (x:_) = x
 --penultimate (x:_) = x:xs
 
-testiterate :: [a] -> a
+
+-- testiterate :: [a] -> a
 testiterate [] = error "An empty list was provided"
 testiterate [x] = error "A list with one element was provided"
-testiterate (x:xs) = if(length xs == 2) then "at penultimate" else "iterating"
+testiterate (x:xs) = if length xs == 1 then x else testiterate(xs)
 
-
---penultimate list = 
+-- penultimate list = 
 -- penultimate list = if length list > 0 then a
 -- penultimate list = show (length list)
 -- penultimate list = if length list == 1 then head list else penultimate (tail list)
