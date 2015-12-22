@@ -15,3 +15,9 @@
 -------------------------------------------------------------------------------
 -- My Solution
 -------------------------------------------------------------------------------
+elementAt :: [a] -> Int -> a
+elementAt [] _       = error "Out of bounds error"
+elementAt (x:_) 1    = x
+elementAt (x:xs) y 
+| y < 1              = error "Index out of bounds"
+| otherwise          = elementAt xs (y-1)
